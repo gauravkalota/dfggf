@@ -54,4 +54,12 @@ readonly PhotoUrl = "http://localhost:59602/Photos/";
     return this.http.get<any[]>(this.APIUrl+'/Employee/GetAllDepartmentNames');
   }
 
+  searchEP(val:any){
+    return this.http.post(this.APIUrl+'/Employee/Search',val);
+  }
+
+  searchEPP(val:any){
+    return this.http.post(this.APIUrl+'/Employee/Search1',val);
+  }
+
 }

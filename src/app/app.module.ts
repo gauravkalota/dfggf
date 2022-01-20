@@ -13,6 +13,7 @@ import{SharedService} from './shared.service';
 
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
     AddEditDepComponent,
     EmployeeComponent,
     ShowEmpComponent,
-    AddEditEmpComponent
+    AddEditEmpComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
