@@ -21,6 +21,8 @@ export class ShowEmpComponent implements OnInit {
   EmployeeNameFilter:string="";
   EmployeeListWithoutFilter:any=[];
 
+  page: number = 1;
+  totalLength:any;
 
   ngOnInit(): void {
     this.refreshEmpList();

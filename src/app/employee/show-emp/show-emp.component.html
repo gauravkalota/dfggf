@@ -83,7 +83,7 @@ data-backdrop="static" data-keyboard="false"
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let dataItem of EmployeeList">
+        <tr *ngFor="let dataItem of EmployeeList | paginate: { itemsPerPage: 5, currentPage: page , totalItems:totalLength }  ">
             <td>{{dataItem.EmployeeId}}</td>
             <td>{{dataItem.EmployeeName}}</td>
             <td>{{dataItem.Department}}</td>
@@ -110,3 +110,5 @@ data-backdrop="static" data-keyboard="false"
         </tr>
     </tbody>
 </table>
+<pagination-controls (pageChange)="page = $event"></pagination-controls>
+

@@ -20,6 +20,10 @@ export class ShowDepComponent implements OnInit {
   DepartmentNameFilter:string="";
   DepartmentListWithoutFilter:any=[];
 
+  page: number = 1;
+  totalLength:any;
+
+
   ngOnInit(): void {
     this.refreshDepList();
   }

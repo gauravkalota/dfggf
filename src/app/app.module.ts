@@ -14,7 +14,7 @@ import{SharedService} from './shared.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HistoryComponent } from './history/history.component';
-
+import {NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,8 @@ import { HistoryComponent } from './history/history.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]
