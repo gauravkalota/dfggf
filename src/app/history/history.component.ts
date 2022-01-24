@@ -10,7 +10,7 @@ export class HistoryComponent implements OnInit {
 
   constructor(private service:SharedService) { }
 
-  DepartmentList:any=[];
+  EmployeeList:any=[];
 
   ModalTitle:string;
   ActivateAddEditDepComp:boolean=false;
@@ -25,8 +25,16 @@ export class HistoryComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.refreshDepList();
+    this.refreshEmpLogs();
   }
+
+
+  refreshEmpLogs(){
+    this.service.getELogs().subscribe(data=>{
+      this.EmployeeList=data;
+    });
+  }
+
 
   addClick(){
     this.dep={

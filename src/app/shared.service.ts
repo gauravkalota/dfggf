@@ -62,4 +62,9 @@ readonly PhotoUrl = "http://localhost:59602/Photos/";
     return this.http.post(this.APIUrl+'/Employee/Search1',val);
   }
 
+  
+  getELogs():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl+'/Employee/history');
+  }
+
 }
