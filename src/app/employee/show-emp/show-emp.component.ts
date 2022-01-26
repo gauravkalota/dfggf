@@ -16,7 +16,7 @@ export class ShowEmpComponent implements OnInit {
   ActivateAddEditEmpComp:boolean=false;
   emp:any;
 
-  
+  message:string ="Search Function";
   EmployeeIdFilter:string="";
   EmployeeNameFilter:string="";
   EmployeeListWithoutFilter:any=[];
@@ -92,6 +92,12 @@ export class ShowEmpComponent implements OnInit {
         return (b[prop]>a[prop])?1 : ((b[prop]<a[prop]) ?-1 :0);
       }
     })
+  }
+
+
+  filterfuncion(){
+    alert(this.message);
+
   }
 }
 

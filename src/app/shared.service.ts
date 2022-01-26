@@ -67,4 +67,8 @@ readonly PhotoUrl = "http://localhost:59602/Photos/";
     return this.http.get<any[]>(this.APIUrl+'/Employee/history');
   }
 
+  getALLELogs():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl+'/Employee/audit');
+  }
+
 }

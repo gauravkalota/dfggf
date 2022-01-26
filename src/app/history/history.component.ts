@@ -30,7 +30,7 @@ export class HistoryComponent implements OnInit {
 
 
   refreshEmpLogs(){
-    this.service.getELogs().subscribe(data=>{
+    this.service.getALLELogs().subscribe(data=>{
       this.EmployeeList=data;
     });
   }
