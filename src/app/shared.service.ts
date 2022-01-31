@@ -33,6 +33,14 @@ readonly PhotoUrl = "http://localhost:59602/Photos/";
     return this.http.get<any>(this.APIUrl+'/Employee');
   }
 
+  getEmpListPaginated(val:any){
+    return this.http.get(this.APIUrl+'/Employee/Pagination'+val)
+  }
+
+  getSearch(val:string){
+    return this.http.get(this.APIUrl+'/Employee/Hit/'+val);
+  }
+
   addEmployee(val:any){
     return this.http.post(this.APIUrl+'/Employee',val);
   }

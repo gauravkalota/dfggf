@@ -10,15 +10,9 @@ export class HistoryComponent implements OnInit {
 
   constructor(private service:SharedService) { }
 
-  EmployeeList:any=[];
+  List:any=[];
 
-  ModalTitle:string;
-  ActivateAddEditDepComp:boolean=false;
-  dep:any;
 
-  DepartmentIdFilter:string="";
-  DepartmentNameFilter:string="";
-  DepartmentListWithoutFilter:any=[];
 
   page: number = 1;
   totalLength:any;
@@ -31,7 +25,7 @@ export class HistoryComponent implements OnInit {
 
   refreshEmpLogs(){
     this.service.getALLELogs().subscribe(data=>{
-      this.EmployeeList=data;
+      this.List=data;
     });
   }
 
