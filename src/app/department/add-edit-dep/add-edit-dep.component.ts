@@ -11,6 +11,7 @@ export class AddEditDepComponent implements OnInit {
   constructor(private service:SharedService) { }
 
   @Input() dep:any;
+  @Input() ActivateAddEditDepComp:boolean;
   DepartmentId:string;
   DepartmentName:string;
 
@@ -22,17 +23,25 @@ export class AddEditDepComponent implements OnInit {
   addDepartment(){
     var val = {DepartmentId:this.DepartmentId,
                 DepartmentName:this.DepartmentName};
-    this.service.addDepartment(val).subscribe(res=>{
-      alert(res.toString());
-    });
-  }
+    this.service.addDepartment(val).subscribe();
+      this.ActivateAddEditDepComp=false;
+
+    };
+   
+    
+  
+  
 
   updateDepartment(){
     var val = {DepartmentId:this.DepartmentId,
       DepartmentName:this.DepartmentName};
-    this.service.updateDepartment(val).subscribe(res=>{
-    alert(res.toString());
-    });
-  }
+    this.service.updateDepartment(val).subscribe();
+
+    };
+
+    
+
+    
+  
 
 }

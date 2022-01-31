@@ -37,6 +37,7 @@ readonly PhotoUrl = "http://localhost:59602/Photos/";
     return this.http.get(this.APIUrl+'/Employee/Pagination'+val)
   }
 
+  /////FILTER_LIST//////////////
   getSearch(val:string){
     return this.http.get(this.APIUrl+'/Employee/Hit/'+val);
   }
@@ -75,8 +76,16 @@ readonly PhotoUrl = "http://localhost:59602/Photos/";
     return this.http.get<any[]>(this.APIUrl+'/Employee/history');
   }
 
+  /////HISTORY_NOTES//////
   getALLELogs():Observable<any[]>{
     return this.http.get<any[]>(this.APIUrl+'/Employee/audit');
   }
+
+  /////History_Notes_Time_Range/////////
+  getSelectLogs(val1:string,val2:string){
+    return this.http.get(this.APIUrl+'/Employee/audit/timerange/'+val1,+val2);
+  }
+
+
 
 }
