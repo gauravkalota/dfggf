@@ -23,6 +23,12 @@ export class ShowEmpComponent implements OnInit {
   empname:string="";
   page: number = 1;
   totalLength:any;
+  p1:any=1;
+  p2:any=2;
+  p3:any=3;
+  p4:any=4;
+  p5:any=5;
+
 
   ngOnInit(): void {
     this.refreshEmpList();
@@ -64,11 +70,48 @@ export class ShowEmpComponent implements OnInit {
 
 
   refreshEmpList(){
-    this.service.getEmpList().subscribe(data=>{
+    /**this.service.getEmpList().subscribe(data=>{
       this.EmployeeList=data;
       this.EmployeeListWithoutFilter=data;
+    });**/
+
+    this.service.gettemp(this.p1).subscribe(data=>{
+      this.EmployeeList=data;
     });
   }
+
+  forward1(item){
+    this.service.gettemp(this.p2).subscribe(data=>{
+      this.EmployeeList=data;
+    });
+  }
+
+  forward2(item){
+    this.service.gettemp(this.p3).subscribe(data=>{
+      this.EmployeeList=data;
+    });
+  }
+
+  forward3(item){
+    this.service.gettemp(this.p4).subscribe(data=>{
+      this.EmployeeList=data;
+    });
+  }
+
+  forward4(item){
+    this.service.gettemp(this.p5).subscribe(data=>{
+      this.EmployeeList=data;
+    });
+  }
+
+
+
+
+  /**forwardNext(item){
+    this.service.gettemp(this.p3).subscribe(data=>{
+      this.EmployeeList=data;
+    });
+  }**/
 
   
 

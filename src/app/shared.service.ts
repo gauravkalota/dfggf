@@ -82,10 +82,15 @@ readonly PhotoUrl = "http://localhost:59602/Photos/";
   }
 
   /////History_Notes_Time_Range/////////
-  getSelectLogs(val1:string,val2:string){
-    return this.http.get(this.APIUrl+'/Employee/audit/timerange/'+val1,+val2);
+  getSelectLogs(val1:any,val2:any){
+    return this.http.get(this.APIUrl+'/Employee/audit/timerange/'+val1+'/'+val2);
   }
 
+
+  //////////Pagination_Emp_list////////////
+  gettemp(val:any){
+    return this.http.get(this.APIUrl+'/Employee/Pagination/'+val);
+  }
 
 
 }

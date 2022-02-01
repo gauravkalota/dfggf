@@ -13,8 +13,8 @@ export class HistoryComponent implements OnInit {
   constructor(private service:SharedService) { }
 
   List:any=[];
-  Date1:string;
-  Date2:string;
+  Date1:any;
+  Date2:any;
 
 
 
@@ -37,7 +37,6 @@ export class HistoryComponent implements OnInit {
   }
 
   ShowDatawithTime(){
-    //alert("Hello");
     this.service.getSelectLogs(this.Date1,this.Date2).subscribe(data=>{
       this.List=data;
     })
