@@ -6,13 +6,14 @@
         placeholder="Enter Department Name" >
         <span *ngIf="DepartmentNameControl.invalid" class="help-block" style="color: red;" >Department Name is Required</span>
     </div>
+  
     
 </div>
 
-<button [disabled]="DepartmentNameControl.invalid" (click)="addDepartment()" *ngIf="dep.DepartmentId==0" class="btn btn-primary">
+<button data-dismiss="modal" [disabled]="DepartmentNameControl.invalid" (click)="addDepartment()" *ngIf="dep.DepartmentId==0" class="btn btn-primary">
     Add
 </button>
 
-<button [disabled]="DepartmentNameControl.invalid" (click)="updateDepartment()" *ngIf="dep.DepartmentId!=0" class="btn btn-primary">
+<button data-dismiss="modal" [disabled]="DepartmentNameControl.invalid" (click)="updateDepartment()" *ngIf="dep.DepartmentId!=0" class="btn btn-primary">
     Update
 </button>

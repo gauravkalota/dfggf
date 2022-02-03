@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SharedService} from 'src/app/shared.service';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 @Component({
   selector: 'app-show-emp',
@@ -29,6 +31,7 @@ export class ShowEmpComponent implements OnInit {
   p4:any=4;
   p5:any=5;
 
+  
 
   ngOnInit(): void {
     this.refreshEmpList();
@@ -70,14 +73,14 @@ export class ShowEmpComponent implements OnInit {
 
 
   refreshEmpList(){
-    /**this.service.getEmpList().subscribe(data=>{
+    this.service.getEmpList().subscribe(data=>{
       this.EmployeeList=data;
       this.EmployeeListWithoutFilter=data;
-    });**/
-
-    this.service.gettemp(this.p1).subscribe(data=>{
-      this.EmployeeList=data;
     });
+////For Pagination
+    // this.service.gettemp(this.p1).subscribe(data=>{
+    //   this.EmployeeList=data;
+    // });
   }
 
   forward1(item){

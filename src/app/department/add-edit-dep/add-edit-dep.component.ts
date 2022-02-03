@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {SharedService} from 'src/app/shared.service';
 
+
 @Component({
   selector: 'app-add-edit-dep',
   templateUrl: './add-edit-dep.component.html',

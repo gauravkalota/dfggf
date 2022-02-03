@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,Inject } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HistoryComponent } from './history/history.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from './material/material.module';
+import { MattableComponent } from './mattable/mattable.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +30,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     EmployeeComponent,
     ShowEmpComponent,
     AddEditEmpComponent,
-    HistoryComponent
+    HistoryComponent,
+    MattableComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +39,12 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule,
+    MaterialModule
+    
   ],
   providers: [SharedService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

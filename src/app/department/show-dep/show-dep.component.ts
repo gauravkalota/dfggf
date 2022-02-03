@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SharedService} from 'src/app/shared.service';
 
+
 @Component({
   selector: 'app-show-dep',
   templateUrl: './show-dep.component.html',
@@ -19,7 +20,6 @@ export class ShowDepComponent implements OnInit {
   DepartmentIdFilter:string="";
   DepartmentNameFilter:string="";
   DepartmentListWithoutFilter:any=[];
-
   page: number = 1;
   totalLength:any;
 
